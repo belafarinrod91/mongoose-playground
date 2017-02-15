@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Some other todo",
+    "content": "some other content",
+    "date": 1484664034044,
+    "done": false
+  },
+  {
+    "id": 2,
+    "title": "Some other todo",
+    "content": "some other content",
+    "date": 1484664034797,
+    "done": false
+  }
+]
