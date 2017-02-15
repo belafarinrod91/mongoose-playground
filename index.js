@@ -65,7 +65,7 @@ app.get('/todos', (request, response) => {
 });
 
 //Delete todo by internal id
-app.post('/deleteTodo/:id', (request, response) => {
+app.delete('/todo/:id', (request, response) => {
     var todoId = request.params.id;
 
     TodoModel.find({_id: todoId}, function(err, todos){
@@ -79,8 +79,9 @@ app.post('/deleteTodo/:id', (request, response) => {
     });
 });
 
+
 //Add todo
-app.post('/addTodo', (request, response) => {
+app.post('/todo', (request, response) => {
     var _title = request.body.title;
     var _content = request.body.content;
     var _date = request.body.date || new Date();
@@ -108,7 +109,7 @@ app.post('/addTodo', (request, response) => {
 });
 
 //Update Todo by internal id
-app.post('/updateTodo/:id', (request, response) => {
+app.post('/todo/:id', (request, response) => {
     var todoId = request.params.id;
 
     TodoModel.find({_id: todoId}, function(err, todos){
